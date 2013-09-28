@@ -48,7 +48,7 @@ setup(name='templer.affinitic',
       entry_points="""
       # -*- Entry points: -*-
       [paste.paster_create_template]
-      basic_buildout = templer.affinitic:BasicBuildout
+      basic_plone_buildout = templer.affinitic:BasicBuildout
 
       [templer.templer_structure]
       bootstrap = templer.affinitic.structures:BootstrapStructure

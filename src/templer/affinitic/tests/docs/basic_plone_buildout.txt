@@ -1,5 +1,5 @@
 =======================
-basic_buildout template
+basic_plone_buildout template
 =======================
 
 The basic buildout template creates a simple, no-frills buildout suitable for 
@@ -8,8 +8,8 @@ there are no restrictions on the name provided for the package.
 
 Create a buildout with a simple name::
 
-    >>> templer('basic_buildout mybuild --no-interactive')
-    templer basic_buildout mybuild --no-interactive
+    >>> templer('basic_plone_buildout mybuild --no-interactive')
+    templer basic_plone_buildout mybuild --no-interactive
     ...
 
 Let's be sure that the package we just created exists and has the right name::
