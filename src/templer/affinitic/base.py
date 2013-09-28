@@ -10,7 +10,7 @@ Copyright by Affinitic sprl
 from templer.core.basic_namespace import BasicNamespace
 from templer.core.base import get_zopeskel_prefs, wrap_help_paras
 from templer.core.create import NoDefault, BadCommand
-from templer.core.vars import ValidationException
+from templer.core.vars import ValidationException, StringChoiceVar
 from templer.core.base import get_var
 
 from textwrap import TextWrapper
@@ -20,6 +20,15 @@ class AffiniticBaseTemplate(BasicNamespace):
 
     def __init__(self, *args, **kw):
         super(AffiniticBaseTemplate, self).__init__(*args, **kw)
+
+        # Add new var
+        self.vars.insert(2, StringChoiceVar(
+            'hoster',
+            title='Web hosting service',
+            description='If public, choose github. If private, choose bitbucket (github/bitbucket)',
+            default='github',
+            choices=('github', 'bitbucket'),
+        ))
 
         # Change existing vars
         get_var(self.vars, 'version').default = '0.1'
@@ -32,6 +41,8 @@ class AffiniticBaseTemplate(BasicNamespace):
         get_var(self.vars, 'author_email').questionable = False
 
         get_var(self.vars, 'description').required = True
+
+        get_var(self.vars, 'long_description').questionable = False
 
         get_var(self.vars, 'keywords').default = 'Affinitic'
         get_var(self.vars, 'keywords').questionable = False
@@ -126,7 +137,7 @@ class AffiniticBaseTemplate(BasicNamespace):
                            and var.required == True \
                            and response.strip() == '':
                             print
-                            print "You must response to this question!"
+                            print "You must answer to this question!"
                             print
                             response = self.null_value_marker
 
@@ -157,6 +168,8 @@ class AffiniticBaseTemplate(BasicNamespace):
                 hidden = self._filter_for_modes(expert_mode, expect_vars)
                 unused_vars.update(hidden)
 
+            self.process_dependents_vars(vars, var, response, expect_vars)
+
         if errors:
             raise BadCommand(
                 'Errors in variables:\n%s' % '\n'.join(errors))
@@ -166,3 +179,15 @@ class AffiniticBaseTemplate(BasicNamespace):
         result = converted_vars
 
         return result
+
+    def process_dependents_vars(self, vars, changed_var, changed_var_value, expect_vars):
+        """
+        Process some changes on vars that need to know the value of precedent var
+        """
+        if changed_var.name == 'hoster':
+            if changed_var_value == 'github':
+                host = 'github.com'
+            elif changed_var_value == 'bitbucket':
+                host = 'bitbucket.org'
+            url = 'https://%s/affinitic/%s' % (host, vars['project'])
+            get_var(expect_vars, 'url').default = url
