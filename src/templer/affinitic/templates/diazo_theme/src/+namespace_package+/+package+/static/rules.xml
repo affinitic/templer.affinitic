@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+
+    <notheme if="$ajax_load" />
+    <notheme if-path="presentation_view"/>
+    <notheme if-path="source_editor.htm"/>
+    <notheme if-path="ploneimage.htm"/>
+    <notheme if-path="anchor.htm"/>
+    <notheme if-path="table.htm"/>
+    <notheme if-path="attributes.htm"/>
+
+    <!-- Common Plone rules -->
+    <drop theme="/html/head/meta" />
+    <drop theme="/html/head/title" />
+    <drop theme="/html/head/base" />
+    <drop theme="/html/head/style" />
+    <drop theme="/html/head/script" />
+    <drop theme="/html/head/link" />
+    <drop theme="/html/head/comment()" />
+    <after content="/html/head/meta" theme-children="/html/head" />
+    <after content="/html/head/title" theme-children="/html/head" />
+    <after
+        content="/html/head/base | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"
+        theme-children="/html/head"
+        />
+
+    <copy attributes="xmlns lang xml:lang" content="/html" theme="/html" />
+    <copy attributes="class id dir" content="/html/body" theme="/html/body" />
+
+    <replace css:content-children="#portal-siteactions"
+             css:theme-children="#portal-siteactions" />
+
+    <replace css:content-children="#portal-languageselector"
+             css:theme-children="#selecteur-langue" />
+
+    <replace css:content-children="#portal-personaltools-wrapper"
+             css:theme-children="#personal-tools" />
+        
+    <copy attributes="href" 
+          css:content="#portal-logo" 
+          css:theme="#portal-logo" />
+
+    <replace css:content-children="#portal-top"
+             css:theme-children="#header" />
+
+    <replace css:content-children="#portal-column-one"
+             css:theme-children="#left-column" />
+
+    <replace css:content-children="#portal-column-content"
+             css:theme-children="#main-column"
+             if="$have_portlets" />
+    
+    <replace css:content-children="#portal-column-content"
+             css:theme-children="#main-column-large"
+             if="$have_no_portlet" />
+    
+    <replace css:content-children="#portal-colophon"
+             css:theme-children="#colophon" />
+
+    <replace css:content-children="#footer-celes"
+             css:theme-children="#footer" />
+
+</rules>

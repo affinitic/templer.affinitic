@@ -1,0 +1,6 @@
+[buildout]
+extends = https://raw.github.com/affinitic/affinitic.dist/master/plone.cfg
+develop = .
+
+[test]
+eggs += ${namespace_package}.${package}

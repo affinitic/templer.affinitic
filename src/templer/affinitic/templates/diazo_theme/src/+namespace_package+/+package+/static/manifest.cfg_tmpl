@@ -1,0 +1,9 @@
+[theme]
+title = ${description or None}
+description = Diazo Theme from ${namespace_package}.${package} package
+
+[theme:overrides]
+directory = overrides
+
+[theme:parameters]
+ajax_load = python: request.form.get('ajax_load', False)

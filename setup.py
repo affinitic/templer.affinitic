@@ -42,13 +42,16 @@ setup(name='templer.affinitic',
       install_requires=[
           'setuptools',
           'templer.core',
+          'templer.buildout',
+          'templer.zope',
       ],
       tests_require=tests_require,
       extras_require=dict(test=tests_require),
       entry_points="""
       # -*- Entry points: -*-
       [paste.paster_create_template]
-      basic_plone_buildout = templer.affinitic:BasicBuildout
+      basic_plone_buildout = templer.affinitic:BasicPloneBuildout
+      diazo_theme = templer.affinitic:DiazoTheme
 
       [templer.templer_structure]
       bootstrap = templer.affinitic.structures:BootstrapStructure
