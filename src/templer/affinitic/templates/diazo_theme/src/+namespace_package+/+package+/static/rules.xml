@@ -35,18 +35,11 @@
     <replace css:content-children="#portal-siteactions"
              css:theme-children="#portal-siteactions" />
 
-    <replace css:content-children="#portal-languageselector"
-             css:theme-children="#selecteur-langue" />
-
     <replace css:content-children="#portal-personaltools-wrapper"
              css:theme-children="#personal-tools" />
         
-    <copy attributes="href" 
-          css:content="#portal-logo" 
-          css:theme="#portal-logo" />
-
-    <replace css:content-children="#portal-top"
-             css:theme-children="#header" />
+    <replace css:content-children="#portal-logo"
+             css:theme-children="#portal-logo" />
 
     <replace css:content-children="#portal-column-one"
              css:theme-children="#left-column" />
@@ -62,7 +55,11 @@
     <replace css:content-children="#portal-colophon"
              css:theme-children="#colophon" />
 
-    <replace css:content-children="#footer-celes"
+    <replace css:content-children="#portal-footer"
              css:theme-children="#footer" />
+
+    <drop css:theme="#left-column" if="$have_no_portlet" />
+    <drop css:theme="#main-column" if="$have_no_portlet" />
+    <drop css:theme="#main-column-large" if="$have_portlets" />
 
 </rules>

@@ -7,3 +7,5 @@ directory = overrides
 
 [theme:parameters]
 ajax_load = python: request.form.get('ajax_load', False)
+have_no_portlet = python:context and (not context.restrictedTraverse('@@plone').have_portlets('plone.leftcolumn',context) and not context.restrictedTraverse('@@plone').have_portlets('plone.rightcolumn',context))
+have_portlets = python:context and (context.restrictedTraverse('@@plone').have_portlets('plone.leftcolumn',context) or context.restrictedTraverse('@@plone').have_portlets('plone.rightcolumn',context))

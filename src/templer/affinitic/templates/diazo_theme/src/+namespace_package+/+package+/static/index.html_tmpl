@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
   	<title>${description or None}</title>
   	<meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div>
-    <header id="header">
-        <div id="portal-logo">
+  </head>
+
+  <body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="portal-siteactions"></div>
+            <div id="portal-logo"></div>
+            <div id="personal-tools"></div>
+        </div><!--header-->
+
+        <div class="visualClear"></div>
+
+        <div id="main-content">
+            <div id="left-column"></div>
+            <div id="main-column"></div>
+            <div id="main-column-large"></div>
         </div>
-    </header>
-    <section id="main">
-        <div class="container">
-        	<article id="content">
-            </article>
+
+        <div class="visualClear"></div>
+
+        <div id="colophon">
         </div>
-    </section>
-    <footer id="footer">
-    </footer>
-  </div>
-</body>
+
+        <div id="footer">
+        </div>
+
+    </div><!--wrapper-->
+  </body>
 </html>
