@@ -2,5 +2,13 @@
 extends = https://raw.github.com/affinitic/affinitic.dist/master/plone.cfg
 develop = .
 
+[versions]
+plone.app.themingplugins = 1.0b1
+z3c.jbot = 0.7.1
+
+[instance]
+eggs += ${namespace_package}.${package}
+zcml += ${namespace_package}.${package}
+
 [test]
 eggs += ${namespace_package}.${package}
