@@ -31,6 +31,8 @@ class AffiniticBaseTemplate(BasicNamespace):
         get_var(self.vars, 'author_email').default = 'info@affinitic.be'
         get_var(self.vars, 'author_email').questionable = False
 
+        get_var(self.vars, 'description').required = True
+
         get_var(self.vars, 'keywords').default = 'Affinitic'
         get_var(self.vars, 'keywords').questionable = False
 
@@ -119,6 +121,15 @@ class AffiniticBaseTemplate(BasicNamespace):
                             wrap_help_paras(textwrapper, help)
                             print
                             response = self.null_value_marker
+
+                        if hasattr(var, 'required') \
+                           and var.required == True \
+                           and response.strip() == '':
+                            print
+                            print "You must response to this question!"
+                            print
+                            response = self.null_value_marker
+
                         if response is not self.null_value_marker:
                             try:
                                 response = var.validate(response)
