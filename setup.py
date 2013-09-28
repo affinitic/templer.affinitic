@@ -47,5 +47,10 @@ setup(name='templer.affinitic',
       extras_require=dict(test=tests_require),
       entry_points="""
       # -*- Entry points: -*-
+      [paste.paster_create_template]
+      basic_buildout = templer.affinitic:BasicBuildout
+
+      [templer.templer_structure]
+      bootstrap = templer.affinitic.structures:BootstrapStructure
       """,
       )
