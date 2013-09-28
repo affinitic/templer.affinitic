@@ -1,6 +1,5 @@
 [buildout]
 extends = https://raw.github.com/affinitic/affinitic.dist/master/plone.cfg
 
-[port]
-instance = ${port}
-foo = ${version}
+[instance]
+http-adress = ${port}
