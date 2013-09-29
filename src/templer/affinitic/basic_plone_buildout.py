@@ -14,7 +14,7 @@ class BasicPloneBuildout(AffiniticBaseTemplate):
     _template_dir = 'templates/basic_plone_buildout'
     summary = "A basic Plone buildout skeleton"
     help = "This creates a basic skeleton for a Plone buildout."
-    category = "Buildout"
+    category = "Affinitic"
     required_templates = []
     default_required_structures = ['bootstrap', ]
 
