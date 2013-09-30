@@ -74,8 +74,7 @@ class AffiniticBaseTemplate(BasicNamespace):
                 vars = copy.deepcopy(BasicNamespace.vars)
                 get_var(vars, 'version').questionable = False
         """
-        if not cmd.options.no_interactive and \
-           not hasattr(cmd, '_deleted_once'):
+        if not hasattr(cmd, '_deleted_once'):
             del vars['package']
             cmd._deleted_once = True
 
