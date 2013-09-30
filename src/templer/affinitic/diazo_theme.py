@@ -13,7 +13,3 @@ class DiazoTheme(AffiniticBaseBuildoutTemplate):
     _template_dir = 'templates/diazo_theme'
     summary = "A basic Diazo theme package skeleton"
     help = "This creates a basic skeleton for a Plone Buildout Diazo theme."
-    category = "Affinitic"
-    required_templates = []
-    default_required_structures = ['bootstrap', ]
-    use_cheetah = True

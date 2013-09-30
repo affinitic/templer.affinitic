@@ -55,5 +55,6 @@ setup(name='templer.affinitic',
 
       [templer.templer_structure]
       bootstrap = templer.affinitic.structures:BootstrapStructure
+      gitignore = templer.affinitic.structures:GitIgnoreStructure
       """,
       )

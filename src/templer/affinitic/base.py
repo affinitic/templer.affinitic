@@ -205,7 +205,7 @@ class AffiniticBaseTemplate(BasicNamespace):
 class AffiniticBaseBuildoutTemplate(AffiniticBaseTemplate):
     category = "Affinitic"
     required_templates = []
-    default_required_structures = ['bootstrap', ]
+    default_required_structures = ['bootstrap', 'gitignore']
 
     def __init__(self, *args, **kw):
         super(AffiniticBaseBuildoutTemplate, self).__init__(*args, **kw)
