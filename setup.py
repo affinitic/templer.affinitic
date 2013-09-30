@@ -50,8 +50,8 @@ setup(name='templer.affinitic',
       entry_points="""
       # -*- Entry points: -*-
       [paste.paster_create_template]
-      basic_plone_buildout = templer.affinitic:BasicPloneBuildout
-      diazo_theme = templer.affinitic:DiazoTheme
+      affinitic_basic_plone_buildout = templer.affinitic:BasicPloneBuildout
+      affinitic_diazo_theme = templer.affinitic:DiazoTheme
 
       [templer.templer_structure]
       bootstrap = templer.affinitic.structures:BootstrapStructure

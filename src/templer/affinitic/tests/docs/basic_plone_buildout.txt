@@ -1,6 +1,6 @@
-=======================
+=============================
 basic_plone_buildout template
-=======================
+=============================
 
 The basic buildout template creates a simple, no-frills buildout suitable for 
 extending in any way the user sees fit.  As it is a buildout, and not an egg,
@@ -8,8 +8,8 @@ there are no restrictions on the name provided for the package.
 
 Create a buildout with a simple name::
 
-    >>> templer('basic_plone_buildout mybuild --no-interactive')
-    templer basic_plone_buildout mybuild --no-interactive
+    >>> templer('affinitic_basic_plone_buildout mybuild --no-interactive')
+    templer affinitic_basic_plone_buildout mybuild --no-interactive
     ...
 
 Let's be sure that the package we just created exists and has the right name::
@@ -22,3 +22,4 @@ buildout.cfg::
     >>> ls('.', 'mybuild')
     bootstrap.py
     buildout.cfg
+    docs
