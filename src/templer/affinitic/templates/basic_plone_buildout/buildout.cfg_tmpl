@@ -2,4 +2,4 @@
 extends = https://raw.github.com/affinitic/affinitic.dist/master/plone.cfg
 
 [instance]
-http-adress = ${port}
+http-address = ${port}
