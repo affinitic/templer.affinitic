@@ -7,7 +7,7 @@ plone.app.themingplugins = 1.0b1
 z3c.jbot = 0.7.1
 
 [instance]
-http-adress = ${port}
+http-address = ${port}
 eggs += ${namespace_package}.${package}
 zcml += ${namespace_package}.${package}
 
