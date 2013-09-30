@@ -6,7 +6,7 @@
       name="default"
       title="${description or None}"
       directory="profiles/default"
-      description="Extension profile for ${description or None}"
+      description="Installs profile for ${description or None}"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
