@@ -27,7 +27,7 @@ class AffiniticBaseTemplate(BasicNamespace):
         super(AffiniticBaseTemplate, self).__init__(*args, **kw)
 
         # Add new var
-        self.vars.insert(2, StringChoiceVar(
+        self.vars.insert(3, StringChoiceVar(
             'hoster',
             title='Web hosting service',
             description='If public, choose github. If private, choose bitbucket (github/bitbucket)',
@@ -74,6 +74,11 @@ class AffiniticBaseTemplate(BasicNamespace):
                 vars = copy.deepcopy(BasicNamespace.vars)
                 get_var(vars, 'version').questionable = False
         """
+        if not cmd.options.no_interactive and \
+           not hasattr(cmd, '_deleted_once'):
+            del vars['package']
+            cmd._deleted_once = True
+
         # if we need to notify users of anything before they start this
         # whole process, we can do it here.
         self.print_zopeskel_message('pre_run_msg')
