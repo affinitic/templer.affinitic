@@ -10,13 +10,18 @@ Copyright by Affinitic sprl
 from templer.core.basic_namespace import BasicNamespace
 from templer.core.base import get_zopeskel_prefs, wrap_help_paras
 from templer.core.create import NoDefault, BadCommand
-from templer.core.vars import ValidationException, StringChoiceVar
+from templer.core.vars import (
+    ValidationException,
+    StringVar,
+    StringChoiceVar)
 from templer.core.base import get_var
 
 from textwrap import TextWrapper
 
 
 class AffiniticBaseTemplate(BasicNamespace):
+
+    use_cheetah = True
 
     def __init__(self, *args, **kw):
         super(AffiniticBaseTemplate, self).__init__(*args, **kw)
@@ -191,3 +196,20 @@ class AffiniticBaseTemplate(BasicNamespace):
                 host = 'bitbucket.org'
             url = 'https://%s/affinitic/%s' % (host, vars['project'])
             get_var(expect_vars, 'url').default = url
+
+
+class AffiniticBaseBuildoutTemplate(AffiniticBaseTemplate):
+    category = "Affinitic"
+    required_templates = []
+    default_required_structures = ['bootstrap', ]
+
+    def __init__(self, *args, **kw):
+        super(AffiniticBaseBuildoutTemplate, self).__init__(*args, **kw)
+
+        # Add new var
+        self.vars.append(StringVar(
+            'port',
+            title='Zope port',
+            description='Specify a port for your zope',
+            default='8080',
+        ))
