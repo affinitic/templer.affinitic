@@ -1,0 +1,41 @@
+====================
+diazo_theme template
+====================
+
+The diazo theme buildout template creates a simple, no-frills buildout
+suitable with a Plone diazo theme package.
+
+Create a buildout with a simple name::
+
+    >>> templer('affinitic_diazo_theme my.theme --no-interactive')
+    templer affinitic_diazo_theme my.theme --no-interactive
+    ...
+
+Let's be sure that the package we just created exists and has the right name::
+    >>> ls('.')
+    my.theme
+
+The buildout should contain the bootstrap.py file, a buildout.cfg file, text
+files and the newly created package::
+
+    >>> ls('.', 'my.theme')
+    README.txt
+    bootstrap.py
+    buildout.cfg
+    docs
+    setup.py
+    src
+    >>> ls('.', 'my.theme', 'src')
+    my
+    >>> ls('.', 'my.theme', 'src', 'my')
+    __init__.py
+    theme
+    >>> ls('.', 'my.theme', 'src', 'my', 'theme')
+    __init__.py
+    configure.zcml
+    interfaces.py
+    profiles
+    profiles.zcml
+    skins
+    skins.zcml
+    static

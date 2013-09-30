@@ -16,8 +16,8 @@ Let's be sure that the package we just created exists and has the right name::
     >>> ls('.')
     mybuild
 
-The buildout should contain nothing but the bootstrap.py file and a 
-buildout.cfg::
+The buildout should contain nothing but the bootstrap.py file, a buildout.cfg
+file and the docs folder.
 
     >>> ls('.', 'mybuild')
     bootstrap.py
