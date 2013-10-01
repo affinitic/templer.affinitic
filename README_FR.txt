@@ -1,8 +1,8 @@
 templer.affinitic
 =================
 
-Summary
--------
+Résumé
+------
 
 Le produit templer.affinitic permet de crééer des nouveaux packages le plus simplement possible et qui correspondent directement aux besoins d'affinitic.
 
@@ -12,8 +12,8 @@ Templates disponibles
 
 Affinitic templer templates :
 
-* affinitic\_basic\_plone\_buildout : A basic Plone buildout skeleton
-* affinitic\_diazo\_theme : A basic Diazo theme package skeleton (with buildout)
+* affinitic\_basic\_plone\_buildout : Une template plone basique
+* affinitic\_diazo\_theme : Une template plone basique avec un diazo (et son propre buildout)
 
 
 Installation
