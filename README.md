@@ -1,14 +1,17 @@
 templer.affinitic
 =================
 
+http://www.affinitic.be/
+info@affinitic.be
+
 Summary
 -------
 
-Le produit templer.affinitic permet de crééer des nouveaux packages le plus simplement possible et qui correspondent directement aux besoins d'affinitic.
+The package templer.affinitic allow to create new packages the simpliest possible and corresponding to Affinitic needs.
 
 
-Templates disponibles
----------------------
+Available templates
+-------------------
 
 Affinitic templer templates :
 
@@ -19,7 +22,7 @@ Affinitic templer templates :
 Installation
 ------------
 
-Pour utiliser ce produit, il faut tout d'abord récupérer et installer son buildout:
+To use this product, you need to clone and install his buildout:
 
         cd buildouts
         git clone git@github.com:affinitic/templer.affinitic.git
@@ -28,53 +31,53 @@ Pour utiliser ce produit, il faut tout d'abord récupérer et installer son buil
         bin/python bootstrap.py
         bin/buildout
 
-Voilà l'outil templer.affinitic est installé. Le script permettant de créer des nouveau package est
+Now that the templer.affinitic tool is installed, the script allowing you to create new package is:
 
         bin/templer
 
-N'hésitez pas à faire un alias de ce script afin de pouvoir l'utiliser partout.
+Do not hesitate to make an alias of the script to use it easily use it anywhere on your computer.
 
 
-Utilisation du script
----------------------
+Script usage
+------------
 
-Le script a besoin qu'on lui indique la template du package que l'on veut installer, la liste s'affiche si on lance le script sans argument ou en lui indiquant '--list'
+The script needs a template as argument, the list of available templates is showed when launching the script without argument or with '--list'
 
         bin/templer
         bin/templer --list
 
-Ceci affichera:
+This will show:
 
         Affinitic
 
         affinitic_basic_plone_buildout: A basic Plone buildout skeleton
         affinitic_diazo_theme:          A basic Diazo theme package skeleton
 
-Ainsi que d'autre templates de zope/plone. Celles qui nous intéressent principalement sont bien entendu les templates affinitic qui pourront s'étoffer au fil de notre amélioration de templer.affinitic.
+... and some other zope/plone templates. We are of course interested by the Affinitic's ones.
 
-Pour enfin lancer la création d'un package, il vous suffit de vous trouver dans le dossier là où vous voulez créer ce package:
+To finally create a new package, you first need to be in the folder where you want the package to be created:
 
         cd buildouts
 
-Et de lancer le script avec la template désirée:
+And to execute the script with the desired template:
 
         ../templer.affinitic/bin/templer affinitic_diazo_theme
 
-Vous pouvez également directement mettre le nom du projet:
+You can also pass the name of the project in the arguments:
 
-        ../templer.affinitic/bin/templer affinitic_diazo_theme mon.package
+        ../templer.affinitic/bin/templer affinitic_diazo_theme my.package
 
-Ensuite une série de questions vous seront posées suivant la template choisie, avec un maximum de réponses par défaut pour faciliter la tâche:
+Next, just answer the questions. They are the most simplified with good default answers:
 
-        Enter project name: mon.package
-        Namespace Package Name (Name of outer namespace package) ['mon']:
+        Enter project name: my.package
+        Namespace Package Name (Name of outer namespace package) ['my']:
         Package Name (Name of the inner namespace package) ['package']:
         Web hosting service (If public, choose github. If private, choose bitbucket (github/bitbucket)) ['github']:
         Description (One-line description of the project) ['']: Description de mon package
-        Project URL (URL of the homepage for this project) ['https://github.com/affinitic/mon.package']:
+        Project URL (URL of the homepage for this project) ['https://github.com/affinitic/my.package']:
         Zope port (Specify a port for your zope) ['8080']:
-        Creating directory ./mon.package
+        Creating directory ./my.package
 
-Ce thème, par exemple, créera un plone avec un diazo et son buildout clé sur porte.
+For example, this template will create a plone with a diazo and it buildout.
 
-Il reste des issues concernant ce package qui peuvent être suivies dans le ticket: http://trac.affinitic.be/trac/ticket/5396
+There is still some issues, you can follow them in the github issues of the package.

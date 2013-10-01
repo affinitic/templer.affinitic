@@ -4,7 +4,7 @@ templer.affinitic
 Résumé
 ------
 
-Le produit templer.affinitic permet de crééer des nouveaux packages le plus simplement possible et qui correspondent directement aux besoins d'affinitic.
+Le produit templer.affinitic permet de créer des nouveaux packages le plus simplement possible et qui correspondent directement aux besoins d'affinitic.
 
 
 Templates disponibles
@@ -50,7 +50,7 @@ Ceci affichera:
         affinitic_basic_plone_buildout: A basic Plone buildout skeleton
         affinitic_diazo_theme:          A basic Diazo theme package skeleton
 
-Ainsi que d'autre templates de zope/plone. Celles qui nous intéressent principalement sont bien entendu les templates affinitic qui pourront s'étoffer au fil de notre amélioration de templer.affinitic.
+... ainsi que d'autre templates de zope/plone. Celles qui nous intéressent principalement sont bien entendu les templates affinitic qui pourront s'étoffer au fil de notre amélioration de templer.affinitic.
 
 Pour enfin lancer la création d'un package, il vous suffit de vous trouver dans le dossier là où vous voulez créer ce package:
 
@@ -77,4 +77,4 @@ Ensuite une série de questions vous seront posées suivant la template choisie,
 
 Ce thème, par exemple, créera un plone avec un diazo et son buildout clé sur porte.
 
-Il reste des issues concernant ce package qui peuvent être suivies dans le ticket: http://trac.affinitic.be/trac/ticket/5396
+Il reste des issues concernant ce package qui peuvent être suivies dans les issues du package sur github.
