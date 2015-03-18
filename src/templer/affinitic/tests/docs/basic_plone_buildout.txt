@@ -20,6 +20,7 @@ The buildout should contain nothing but the bootstrap.py file, a buildout.cfg
 file and the docs folder.
 
     >>> ls('.', 'mybuild')
+    README.rst
     bootstrap.py
     buildout.cfg
     docs

@@ -1,0 +1,18 @@
+#set $header_text = "%s.%s" % ($namespace_package, $package)
+#set $header_line = "=" * len($header_text)
+${namespace_package}.${package}
+${header_line}
+
+${description or None}
+
+
+Credits
+-------
+
+This package was developed by `Affinitic team <https://${hoster}/affinitic>`_.
+
+.. image:: http://www.affinitic.be/affinitic_logo.png
+   :alt: Affinitic website
+   :target: http://www.affinitic.be
+
+``${namespace_package}.${package}`` is licensed under GNU General Public License, version 2.

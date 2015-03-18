@@ -19,7 +19,7 @@ The buildout should contain the bootstrap.py file, a buildout.cfg file, text
 files and the newly created package::
 
     >>> ls('.', 'my.theme')
-    README.txt
+    README.rst
     bootstrap.py
     buildout.cfg
     docs
