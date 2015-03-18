@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 version = '0.1.dev0'
 
 long_description = (
-    open('README.txt').read()
+    open('README.rst').read()
     + '\n' +
     open(os.path.join("docs", "HISTORY.txt")).read())
 

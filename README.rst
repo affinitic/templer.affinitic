@@ -1,9 +1,6 @@
 templer.affinitic
 =================
 
-http://www.affinitic.be/
-info@affinitic.be
-
 Summary
 -------
 
@@ -81,3 +78,15 @@ Next, just answer the questions. They are the most simplified with good default 
 For example, this template will create a plone with a diazo and it buildout.
 
 There is still some issues, you can follow them in the github issues of the package.
+
+
+Credits
+-------
+
+This package was developed by `Affinitic team <https://github.com/affinitic>`_.
+
+.. image:: http://www.affinitic.be/affinitic_logo.png
+   :alt: Affinitic website
+   :target: http://www.affinitic.be
+
+``templer.affinitic`` is licensed under GNU General Public License, version 2.

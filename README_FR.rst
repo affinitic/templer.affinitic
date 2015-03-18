@@ -78,3 +78,15 @@ Ensuite une série de questions vous seront posées suivant la template choisie,
 Ce thème, par exemple, créera un plone avec un diazo et son buildout clé sur porte.
 
 Il reste des issues concernant ce package qui peuvent être suivies dans les issues du package sur github.
+
+
+Crédits
+-------
+
+Ce package a été développé par l'`équipe Affinitic <https://github.com/affinitic>`_.
+
+.. image:: http://www.affinitic.be/affinitic_logo.png
+   :alt: Site web Affinitic
+   :target: http://www.affinitic.be
+
+``templer.affinitic`` est sous license GNU General Public License, version 2.
