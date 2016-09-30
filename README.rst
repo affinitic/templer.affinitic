@@ -1,6 +1,9 @@
 templer.affinitic
 =================
 
+**IMPORTANT** : This package is deprecated in favour of https://github.com/affinitic/bobtemplates.affinitic.
+Please use bobtemplates now.
+
 Summary
 -------
 
